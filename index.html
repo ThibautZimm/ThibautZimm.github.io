@@ -2,36 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bonne Saint-Valentin</title>
   <link rel="stylesheet" href="style.css">
-  <input type="password" id="password" placeholder="Mot de passe">
-<button onclick="verifier()">Valider</button>
-<p id="message"></p>
 </head>
+
 <body>
 
-  <h1>Bonne Saint-Valentin mon cœur ❤️</h1>
+  <div class="container">
+    <h1>Bonne Saint-Valentin mon cœur ❤️</h1>
 
-  <p>La première énigme est : <strong>un être aimé en 3 lettres</strong></p>
+    <p>La première énigme est : <strong>un être aimé en 3 lettres</strong></p>
 
-  <input type="password" id="password" placeholder="Mot de passe">
-  <button onclick="verifier()">Valider</button>
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="verifier()">Valider</button>
 
-  <p id="message" style="color:red;"></p>
+    <p id="message"></p>
+  </div>
 
   <script>
     function verifier() {
       const mdp = document.getElementById("password").value;
       if (mdp === "Ava") {
-        window.location.href = "page2.html"; // page suivante
+        window.location.href = "page2.html";
       } else {
-        document.getElementById("message").innerText = "Ce n’est pas la bonne réponse 💭";
+        document.getElementById("message").innerText =
+          "Ce n’est pas la bonne réponse 💭";
       }
     }
   </script>
 
 </body>
 </html>
-
-
-
