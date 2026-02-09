@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bonne Saint-Valentin</title>
+</head>
+<body>
+
+  <h1>Bonne Saint-Valentin mon cœur ❤️</h1>
+
+  <p>La première énigme est : <strong>un être aimé en 3 lettres</strong></p>
+
+  <input type="password" id="password" placeholder="Mot de passe">
+  <button onclick="verifier()">Valider</button>
+
+  <p id="message" style="color:red;"></p>
+
+  <script>
+    function verifier() {
+      const mdp = document.getElementById("password").value;
+      if (mdp === "Ava") {
+        window.location.href = "page2.html"; // page suivante
+      } else {
+        document.getElementById("message").innerText = "Ce n’est pas la bonne réponse 💭";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
