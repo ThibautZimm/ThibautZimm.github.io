@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,12 +22,11 @@ body {
 
 /* =========================
    CONTENEUR PRINCIPAL
-   (format téléphone)
 ========================= */
 
 .container {
   width: 100%;
-  max-width: 420px;      /* largeur idéale smartphone */
+  max-width: 420px;
   margin: 10px;
   padding: 25px;
 
@@ -45,13 +45,16 @@ body {
 ========================= */
 
 h1 {
+  display: block;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
 p {
+  display: block;
   font-size: 1.1rem;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 /* =========================
@@ -59,9 +62,10 @@ p {
 ========================= */
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  margin: 20px 0;
+  margin: 20px auto;
   border-radius: 15px;
 }
 
@@ -69,28 +73,24 @@ img {
    CHAMPS & BOUTONS
 ========================= */
 
-input {
+input,
+button {
+  display: block;        /* ← retour à la ligne garanti */
   width: 100%;
   padding: 14px;
-  margin-top: 10px;
+  margin-top: 12px;
 
   border-radius: 12px;
   border: none;
-
   font-size: 1rem;
 }
 
 button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 15px;
-
+  margin-top: 16px;
   border-radius: 20px;
-  border: none;
 
   background: #ff4d6d;
   color: white;
-  font-size: 1rem;
   font-weight: bold;
 
   cursor: pointer;
@@ -107,6 +107,7 @@ button:hover {
 ========================= */
 
 #message {
+  display: block;
   margin-top: 15px;
   font-size: 0.95rem;
 }
@@ -127,7 +128,7 @@ button:hover {
 }
 
 /* =========================
-   AJUSTEMENTS PETITS ÉCRANS
+   PETITS ÉCRANS
 ========================= */
 
 @media (max-width: 360px) {
