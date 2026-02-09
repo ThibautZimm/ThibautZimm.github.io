@@ -1,14 +1,9 @@
-/* =========================
-   RESET & BASE
-========================= */
-
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 0;
   min-height: 100vh;
 
   display: flex;
@@ -20,62 +15,43 @@ body {
   color: white;
 }
 
-/* =========================
-   CONTENEUR PRINCIPAL
-========================= */
-
+/* CONTENEUR */
 .container {
+  display: flex;              /* ← important */
+  flex-direction: column;     /* ← FORCE le retour à la ligne */
+
   width: 100%;
   max-width: 420px;
-  margin: 10px;
   padding: 25px;
+  margin: 15px;
 
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
   border-radius: 22px;
-
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 
-  animation: fadeIn 1s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* =========================
-   TEXTES
-========================= */
-
+/* TEXTES */
 h1 {
-  display: block;
-  font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
 p {
-  display: block;
+  margin-bottom: 15px;
   font-size: 1.1rem;
-  line-height: 1.4;
-  margin-bottom: 12px;
 }
 
-/* =========================
-   IMAGES
-========================= */
-
+/* IMAGE */
 img {
-  display: block;
   max-width: 100%;
-  height: auto;
-  margin: 20px auto;
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
-/* =========================
-   CHAMPS & BOUTONS
-========================= */
-
+/* INPUT + BOUTON */
 input,
 button {
-  display: block;        /* ← retour à la ligne garanti */
   width: 100%;
   padding: 14px;
   margin-top: 12px;
@@ -88,55 +64,8 @@ button {
 button {
   margin-top: 16px;
   border-radius: 20px;
-
   background: #ff4d6d;
   color: white;
   font-weight: bold;
-
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background: #ff1e56;
-  transform: scale(1.03);
-}
-
-/* =========================
-   MESSAGE ERREUR / INFO
-========================= */
-
-#message {
-  display: block;
-  margin-top: 15px;
-  font-size: 0.95rem;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   PETITS ÉCRANS
-========================= */
-
-@media (max-width: 360px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
 }
