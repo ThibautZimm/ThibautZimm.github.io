@@ -1,0 +1,141 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+}
+
+/* =========================
+   CONTENEUR PRINCIPAL
+   (format téléphone)
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 420px;      /* largeur idéale smartphone */
+  margin: 10px;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  animation: fadeIn 1s ease;
+}
+
+/* =========================
+   TEXTES
+========================= */
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+/* =========================
+   CHAMPS & BOUTONS
+========================= */
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  border-radius: 12px;
+  border: none;
+
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+
+  border-radius: 20px;
+  border: none;
+
+  background: #ff4d6d;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #ff1e56;
+  transform: scale(1.03);
+}
+
+/* =========================
+   MESSAGE ERREUR / INFO
+========================= */
+
+#message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   AJUSTEMENTS PETITS ÉCRANS
+========================= */
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
